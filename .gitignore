@@ -28,5 +28,5 @@ ex_genetic_zig-*.tar
 .elixir-tools/
 /deps/
 /zig/.zig-cache/
-/zig/zig-output
+/zig/zig-out/
 /test
