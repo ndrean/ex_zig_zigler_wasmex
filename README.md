@@ -23,7 +23,8 @@ The main difference between the two solutions is the way you pass data to and fr
 - with `Zigler`, you can receive a struct as a map
 - with `Wasmex` or `WebAssembly`, you receive a memory index when the data is in binary form
 
-When using WebAssembly, the crux of the interaction is to serialise the data structure in Zig to fit the linear memory model, and to pattern match on the binary on the Elixir side.
+When using WebAssembly, the crux of the interaction is the serialisation of the data structure in Zig you want to pass to Elixir in order to fit the linear memory model. 
+It remains to pattern match on the binary on the Elixir side.
 ## Pass data **from** `Elixir`:
 
 - with `Zigler`, you pass an array of data
