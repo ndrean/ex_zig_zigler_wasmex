@@ -38,7 +38,7 @@ defmodule GW do
       IO.inspect(e, label: "Received response")
       IO.puts("Received response size: #{byte_size(e)}")
 
-      raise "Pattern matching failed"
+      reraise "Pattern matching failed"
     # end,
     # timeout: :infinity
     # )

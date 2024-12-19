@@ -12,12 +12,12 @@ export async function initializeWasmModule() {
       const { memory, set_target, alloc } = instance.exports;
 
       const len = input.length;
-      const stringBuffer = new TextEncoder("ascii").encode(input);
+      const stringBuffer = new TextEncoder("ascii").encode(input); // get an ArrayBuffer of the input string
 
-      const ptr = alloc(len); // Zig alcator
+      const ptr = alloc(len); // get an index from the Zig alcator
       if (ptr < memory.buffer.byteLength && ptr > 0) {
         const wasmMemory = new Uint8Array(memory.buffer);
-        wasmMemory.set(stringBuffer, ptr);
+        wasmMemory.set(stringBuffer, ptr); // copy the ArrayBuffer to the wasm memory
 
         set_target(ptr, len); // Zig set_target
       } else {
