@@ -20,7 +20,7 @@ The main difference between the two solutions is the way you pass data to and fr
 
 ## Receive data **into** `Elixir`:
 
-- with `Zigler`, you can receive a struct as a map
+- with `Zigler`, you can receive a struct as a map. `Zigler` is quite impressive. It also provides also [resources](https://hexdocs.pm/zigler/05-resources.html#declaring-a-resource):  a (safe) way to return pointers to native data structures from a `NIF`.
 - with `Wasmex` or `WebAssembly`, you receive a memory index when the data is in binary form
 
 When using WebAssembly, the crux of the interaction is the serialisation of the data structure in Zig you want to pass to Elixir in order to fit the linear memory model. 
