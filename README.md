@@ -1,4 +1,4 @@
-# Embedded Zig in Elixir with Zigler and in Wasi-WebAssembly with Wasmex
+# Running Zig code in Elixir with Zigler and in Wasi-WebAssembly with Wasmex
 
 I was curious about the difference in execution time between `NIF` and `WebAssembly`.
 
