@@ -16,7 +16,7 @@ All `Zig` code compiled `ReleaseFast` in all cases.
 - you pass the target `.wasi` in `zig build` for `WASI`
 - you pass or `.freestanding` in `zig build` for `WebAssembly`.
 
-The main difference between the two solutions is the way you pass to and from.
+The main difference between the two solutions is the way you pass data to and from the host.
 
 ## Receive data **into** `Elixir`:
 
